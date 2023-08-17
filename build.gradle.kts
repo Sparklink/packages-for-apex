@@ -1,6 +1,6 @@
 plugins {
   id("java")
-  id("org.jetbrains.intellij") version "1.13.2"
+  id("org.jetbrains.intellij") version "1.15.0"
 }
 
 group = "com.bymarcin"
@@ -21,13 +21,13 @@ intellij {
 tasks {
   // Set the JVM compatibility versions
   withType<JavaCompile> {
-    sourceCompatibility = "11"
-    targetCompatibility = "11"
+    sourceCompatibility = "15"
+    targetCompatibility = "15"
   }
 
   patchPluginXml {
-    sinceBuild.set("212")
-    untilBuild.set("223.*")
+    sinceBuild.set("223")
+    untilBuild.set("232.*")
     changeNotes.set("""
         <ul>
             <li>Update to new version of idea</li>
